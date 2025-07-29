@@ -3,7 +3,7 @@
 ![Agile for Beginners](./assets/Agile_for_Beginners.png)
 
 
-![Git](./assets/GunaP_MEAN_Stack_Certificate.pdf)
+![Git](./assets/GIT.png)
 
 
 # 🔧 Git Workflow Demo – Patch, Rebase, Branch, Tag Practice
