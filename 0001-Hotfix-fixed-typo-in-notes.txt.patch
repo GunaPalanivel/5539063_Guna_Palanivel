@@ -1,0 +1,26 @@
+From 3cd90aeb05fd2cf3ca02afc8282611049567b487 Mon Sep 17 00:00:00 2001
+From: GunaPalanivel <gp5901@srmist.edu.in>
+Date: Tue, 29 Jul 2025 13:32:04 +0530
+Subject: [PATCH] Hotfix: fixed typo in notes.txt
+
+---
+ notes.txt | 6 ++++++
+ 1 file changed, 6 insertions(+)
+ create mode 100644 notes.txt
+
+diff --git a/notes.txt b/notes.txt
+new file mode 100644
+index 0000000..d8be602
+--- /dev/null
++++ b/notes.txt
+@@ -0,0 +1,6 @@
++Git is a distributed version control system for tracking changes in source code.
++It allows multiple developers to collaborate on projects efficiently.
++Common commands include git add, git commit, git push, and git pull.
++Branches enable parallel development and feature isolation.
++Merge conflicts occur when the same lines are modified in different branches.
++GitHub and GitLab are popular platforms for hosting Git repositories.
+\ No newline at end of file
+-- 
+2.45.0.windows.1
+
