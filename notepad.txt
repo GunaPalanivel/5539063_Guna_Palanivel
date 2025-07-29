@@ -1,0 +1,5 @@
+This is a simple notepad file.
+You can write your thoughts here.
+Line 3: Add your notes.
+Line 4: Keep it organized.
+Line 5: Save your work!
