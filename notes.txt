@@ -1,0 +1,6 @@
+Git is a distributed version control system for tracking changes in source code.
+It allows multiple developers to collaborate on projects efficiently.
+Common commands include git add, git commit, git push, and git pull.
+Branches enable parallel development and feature isolation.
+Merge conflicts occur when the same lines are modified in different branches.
+GitHub and GitLab are popular platforms for hosting Git repositories.
