@@ -14,3 +14,6 @@
 ![Linux](./14.png)
 ![Linux](./15.png)
 ![Linux](./16.png)
+![Linux](./17.png)
+![Linux](./18.png)
+![Linux](./19.png)
