@@ -1,3 +1,13 @@
+## STEPIn - Linux Day 3 Assignment
+![Linux](./20.png)
+![Linux](./21.png)
+![Linux](./22.png)
+![Linux](./23.png)
+![Linux](./24.png)
+![Linux](./25.png)
+![Linux](./26.png)
+
+## cmd's from 1 to and so, on
 ![Linux](./1.png)
 ![Linux](./2.png)
 ![Linux](./3.png)
