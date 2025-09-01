@@ -1,18 +1,25 @@
-int pageCount(int n, int p) {
-    int turnsFromStart = 0;
-    int turnsFromEnd = 0;
+char* balancedSums(int arr_count, int* arr) {
+    int whole_sum = 0;
+    int j;
     
-    turnsFromStart = p / 2;
-    
-    if (n % 2 == 0) {
-        turnsFromEnd = (n - p) / 2;
-    } else {
-        turnsFromEnd = (n - p) / 2;
+    for(j = 0; j < arr_count; j++) {
+        whole_sum = whole_sum + arr[j];
     }
     
-    if (turnsFromStart <= turnsFromEnd) {
-        return turnsFromStart;
-    } else {
-        return turnsFromEnd;
+    int sum_left = 0;
+    int sum_right;
+    
+    for(j = 0; j < arr_count; j++) {
+        sum_right = whole_sum - sum_left - arr[j];
+        
+        if(sum_left == sum_right) {
+            static char answer1[] = "YES";
+            return answer1;
+        }
+        
+        sum_left = sum_left + arr[j];
     }
+    
+    static char answer2[] = "NO";
+    return answer2;
 }

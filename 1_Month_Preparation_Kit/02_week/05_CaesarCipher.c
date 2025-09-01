@@ -1,18 +1,33 @@
-int pageCount(int n, int p) {
-    int turnsFromStart = 0;
-    int turnsFromEnd = 0;
+char* caesarCipher(char* s, int k) {
+    int textLength = strlen(s);
+    char* encodedString = malloc((textLength + 1) * sizeof(char));
     
-    turnsFromStart = p / 2;
+    int shiftAmount = k % 26;
     
-    if (n % 2 == 0) {
-        turnsFromEnd = (n - p) / 2;
-    } else {
-        turnsFromEnd = (n - p) / 2;
+    for(int pos = 0; pos < textLength; pos++) {
+        char currentChar = s[pos];
+        
+        if(currentChar >= 'a' && currentChar <= 'z') {
+            int charPosition = currentChar - 'a';
+            charPosition = charPosition + shiftAmount;
+            if(charPosition >= 26) {
+                charPosition = charPosition - 26;
+            }
+            encodedString[pos] = 'a' + charPosition;
+        }
+        else if(currentChar >= 'A' && currentChar <= 'Z') {
+            int charPosition = currentChar - 'A';  
+            charPosition = charPosition + shiftAmount;
+            if(charPosition >= 26) {
+                charPosition = charPosition - 26;
+            }
+            encodedString[pos] = 'A' + charPosition;
+        }
+        else {
+            encodedString[pos] = currentChar;
+        }
     }
     
-    if (turnsFromStart <= turnsFromEnd) {
-        return turnsFromStart;
-    } else {
-        return turnsFromEnd;
-    }
+    encodedString[textLength] = '\0';
+    return encodedString;
 }

@@ -1,18 +1,13 @@
 int pageCount(int n, int p) {
-    int turnsFromStart = 0;
-    int turnsFromEnd = 0;
+    int fromFront, fromBack;
     
-    turnsFromStart = p / 2;
+    fromFront = p / 2;
     
     if (n % 2 == 0) {
-        turnsFromEnd = (n - p) / 2;
+        fromBack = (n - p + 1) / 2;
     } else {
-        turnsFromEnd = (n - p) / 2;
+        fromBack = (n - p) / 2;
     }
     
-    if (turnsFromStart <= turnsFromEnd) {
-        return turnsFromStart;
-    } else {
-        return turnsFromEnd;
-    }
+    return (fromFront < fromBack) ? fromFront : fromBack;
 }

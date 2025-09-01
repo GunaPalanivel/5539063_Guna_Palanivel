@@ -1,18 +1,16 @@
-int pageCount(int n, int p) {
-    int turnsFromStart = 0;
-    int turnsFromEnd = 0;
-    
-    turnsFromStart = p / 2;
-    
-    if (n % 2 == 0) {
-        turnsFromEnd = (n - p) / 2;
-    } else {
-        turnsFromEnd = (n - p) / 2;
+char* counterGame(long n) {
+    static char a[] = "Louise";
+    static char b[] = "Richard";
+    int steps = 0;
+    while (n > 1) {
+        if ((n & (n - 1)) == 0) {
+            n >>= 1;
+        } else {
+            long p = 1L << ((long)log2((double)n));
+            n -= p;
+        }
+        steps ^= 1;
     }
-    
-    if (turnsFromStart <= turnsFromEnd) {
-        return turnsFromStart;
-    } else {
-        return turnsFromEnd;
-    }
+    if (steps) return a;
+    return b;
 }

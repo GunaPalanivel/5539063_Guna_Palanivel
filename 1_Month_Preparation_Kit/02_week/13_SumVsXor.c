@@ -1,18 +1,16 @@
-int pageCount(int n, int p) {
-    int turnsFromStart = 0;
-    int turnsFromEnd = 0;
-    
-    turnsFromStart = p / 2;
-    
-    if (n % 2 == 0) {
-        turnsFromEnd = (n - p) / 2;
-    } else {
-        turnsFromEnd = (n - p) / 2;
+long sumXor(long n) {
+    if(n==0) return 1;
+    long zeros=0;
+    while(n>0){
+        if((n & 1L)==0){
+            zeros++;
+        }
+        n >>= 1;
     }
-    
-    if (turnsFromStart <= turnsFromEnd) {
-        return turnsFromStart;
-    } else {
-        return turnsFromEnd;
+    long res=1;
+    while(zeros>0){
+        res <<= 1;
+        zeros--;
     }
+    return res;
 }

@@ -1,18 +1,18 @@
-int pageCount(int n, int p) {
-    int turnsFromStart = 0;
-    int turnsFromEnd = 0;
+int superDigit(char* n, int k) {
+    long long digitSum = 0;
+    int i = 0;
     
-    turnsFromStart = p / 2;
-    
-    if (n % 2 == 0) {
-        turnsFromEnd = (n - p) / 2;
-    } else {
-        turnsFromEnd = (n - p) / 2;
+    while(n[i] != '\0') {
+        digitSum = digitSum + (n[i] - '0');
+        i++;
     }
     
-    if (turnsFromStart <= turnsFromEnd) {
-        return turnsFromStart;
-    } else {
-        return turnsFromEnd;
+    digitSum = (digitSum * k) % 9;
+    
+    if(digitSum == 0) {
+        return 9;
     }
+    
+    return (int)digitSum;
 }
+#include <stdio.h>
